@@ -1,0 +1,139 @@
+:root{
+  --bg:#618ef8; --card:#2e7fa2; --text:#e5e7eb; --muted:#9bc6d3;
+  --brand:#7fa9ff; --border:#1f2937; --focus:#00adf7;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{background:linear-gradient(180deg,#083154,#0794be); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+img{max-width:100%; height:auto; display:block}
+
+.container{max-width:1100px; margin:0 auto; padding:24px 16px}
+.card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px}
+.footer{border-top:1px solid var(--border); color:var(--muted); text-align:center; padding:28px 16px 48px}
+
+.navbar{position:sticky; top:0; z-index:50; background:#0b1020cc; backdrop-filter:blur(8px); border-bottom:1px solid var(--border)}
+.navbar .wrap{display:flex; align-items:center; justify-content:space-between; max-width:1100px; margin:0 auto; padding:12px 16px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700}
+.brand img{width:28px; height:28px}
+.nav{display:flex; gap:14px; align-items:center}
+.nav a{color:var(--text); text-decoration:none; padding:8px 10px; border-radius:10px}
+.nav a.active, .nav a:hover{background:#0b1220; border:1px solid var(--border)}
+.menu-btn{display:none}
+@media (max-width:740px){
+  .menu-btn{display:block; border:1px solid var(--border); background:#0b1020; color:var(--text); border-radius:10px; padding:8px 12px}
+  .nav{display:none; flex-direction:column; align-items:stretch; margin-top:8px}
+  .nav.open{display:flex}
+}
+
+.btn{display:inline-block; background:var(--brand); color:#052612; font-weight:700; padding:10px 16px; border-radius:12px; text-decoration:none; border:1px solid transparent}
+.btn.secondary{background:transparent; border-color:var(--border); color:var(--text)}
+
+
+:root{
+  --bg:#1b63d5;          /* fundo escuro elegante */
+  --card:#111827;        /* cartões */
+  --text:#e5e7eb;        /* texto */
+  --muted:#94a3b8;       /* texto secundário */
+  --brand:#cef123;       /* verde */
+  --danger:#ef4444;      /* vermelho erro */
+  --border:#06a6d6;
+  --focus:#38bdf8;       /* foco acessibilidade */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+  background:linear-gradient(180deg,#0c6d93, #07a8de);
+  color:var(--text);
+}
+
+.topbar{
+  text-align:center;
+  padding:32px 16px 16px;
+}
+.topbar h1{margin:0 0 8px}
+.topbar p{margin:0;color:var(--muted)}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  padding:16px;
+}
+
+form{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+legend{
+  font-weight:600;
+  padding:0 4px;
+  color:var(--text);
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:16px;
+  margin-bottom:16px;
+}
+.field{display:flex; flex-direction:column; gap:8px}
+.field--full{grid-column:1 / -1}
+
+label{font-size:.95rem}
+.inline{display:inline-flex; align-items:center; gap:8px; margin-right:16px}
+
+input, select, textarea{
+  background:#0b1020;
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:10px 12px;
+  outline:none;
+}
+input:focus, select:focus, textarea:focus{
+  border-color:var(--focus);
+  box-shadow:0 0 0 3px rgba(56,189,248,.15);
+}
+
+.hint{color:var(--muted); font-size:.85rem}
+.error{color:var(--danger); min-height:1.1em; font-size:.9rem}
+
+.help{
+  color:var(--muted);
+  margin:6px 0 16px;
+  font-size:.9rem;
+}
+
+.actions{
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+button{
+  border:1px solid transparent;
+  background:var(--brand);
+  color:#03120a;
+  font-weight:600;
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+}
+button:disabled{
+  opacity:.5; cursor:not-allowed;
+}
+button.secondary{
+  background:transparent;
+  border-color:var(--border);
+  color:var(--text);
+}
+
+.footer{
+  text-align:center; color:var(--muted);
+  padding:28px 16px 48px;
+}
+
+.feedback{
+  margin-top:14px;
+  font-weight:600;
+}

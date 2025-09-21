@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — NeuroCuidados</title>
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+      <header class="navbar">
+    <div class="wrap">
+      <a class="brand" href="NeuroCuidados.html">
+        <img src="imagens/Ícone Casa Neural Isolado.jpg" alt="">
+        <span>NeuroCuidados</span>
+      </a>
+      <button class="menu-btn" id="menuBtn">Menu</button>
+      <nav class="nav" id="mainNav">
+        <a href="NeuroCuidados.html">Menu</a>
+        <a href="Contato.html">Contato</a>
+        
+      </nav>
+    </div>
+  </header>
+  <header class="topbar">
+    <h1>Fale com a NeuroCuidados</h1>
+    <p>Tire dúvidas, peça orçamento ou agende um atendimento.</p>
+  </header>
+
+  <main class="container">
+    <form id="contatoForm" novalidate aria-describedby="formHelp">
+      <fieldset class="grid">
+        <legend>Seus dados</legend>
+
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Beatriz Silva" required minlength="3" />
+          <small class="error" id="erro-nome"></small>
+        </div>
+
+        <div class="field">
+          <label for="tel">Telefone (WhatsApp)</label>
+          <input type="tel" id="tel" name="tel" inputmode="numeric" placeholder="(31) 99999-9999" required />
+          <small class="error" id="erro-tel"></small>
+        </div>
+
+        <div class="field">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Ex.: Juiz de Fora" required />
+          <small class="error" id="erro-cidade"></small>
+        </div>
+
+        <div class="field">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione...</option>
+            <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+            <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+            <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+            <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+            <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+            <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+            <option>SP</option><option>SE</option><option>TO</option>
+          </select>
+          <small class="error" id="erro-estado"></small>
+        </div>
+      </fieldset>
+
+      <fieldset class="grid">
+        <legend>Sobre o contato</legend>
+
+        <div class="field">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione...</option>
+            <option value="agendamento">Agendamento</option>
+            <option value="orçamento">Orçamento</option>
+            <option value="duvida">Dúvida</option>
+            <option value="outros">Outros</option>
+          </select>
+          <small class="error" id="erro-assunto"></small>
+        </div>
+
+        <div class="field field--full">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte em poucas linhas como podemos ajudar" required minlength="20"></textarea>
+          <small class="hint">Mínimo de 8 caracteres</small>
+          <small class="error" id="erro-mensagem"></small>
+        </div>
+
+        <div class="field">
+          <span class="label">Preferência de contato</span>
+          <label class="inline"><input type="radio" name="preferencia" value="ligacao" required /> Ligação</label>
+          <label class="inline"><input type="radio" name="preferencia" value="whatsapp" /> WhatsApp</label>
+          <small class="error" id="erro-preferencia"></small>
+        </div>
+
+        <div class="field field--full">
+          <label class="inline">
+            <input type="checkbox" id="lgpd" required />
+            Autorizo o uso dos meus dados para contato (LGPD).
+          </label>
+          <small class="error" id="erro-lgpd"></small>
+        </div>
+      </fieldset>
+
+      <div id="formHelp" class="help">
+        Campos marcados como obrigatórios precisam estar preenchidos corretamente para envio.
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="btnEnviar" >Enviar </button>
+        <button type="reset" class="secondary">Limpar</button>
+      </div>
+
+      <div class="feedback" role="status" aria-live="polite" id="feedback"></div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; 2025 NeuroCuidados</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script> 
+</body>
+</html>
